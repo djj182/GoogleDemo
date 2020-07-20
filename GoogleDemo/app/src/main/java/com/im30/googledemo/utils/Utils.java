@@ -1,4 +1,4 @@
-package com.im30.googledemo;
+package com.im30.googledemo.utils;
 
 import android.content.Intent;
 import android.content.pm.ResolveInfo;

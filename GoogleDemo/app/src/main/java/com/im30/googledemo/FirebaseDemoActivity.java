@@ -4,7 +4,6 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,7 +23,7 @@ import java.util.concurrent.CountDownLatch;
 
 import androidx.annotation.NonNull;
 
-public class FirebaseDemoActivity extends MainActivity {
+public class FirebaseDemoActivity extends BaseActivity {
     private static final String TAG = "MainActivity";
 
     private static final String DEFAULT_CONTENT_FILE = "default_content.txt";

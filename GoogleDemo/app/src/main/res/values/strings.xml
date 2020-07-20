@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">GoogleDemo</string>
     <string name="app_id">139762619690</string>
+    <string name="login">登录</string>
 </resources>
