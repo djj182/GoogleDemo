@@ -5,7 +5,7 @@ apply plugin: 'com.google.firebase.firebase-perf'
 
 android {
     compileSdkVersion 28
-    buildToolsVersion "27.0.1"
+    buildToolsVersion "28.0.3"
     defaultConfig {
         applicationId "com.im30.googledemo"
         minSdkVersion 16
@@ -23,6 +23,11 @@ android {
     }
 
 
+    sourceSets.main {
+        assets.srcDir "assets"
+    }
+
+
 }
 
 
@@ -37,8 +42,6 @@ sourceSets {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
-
-    implementation files("libs/miit_mdid_1.0.9.aar")
 
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'

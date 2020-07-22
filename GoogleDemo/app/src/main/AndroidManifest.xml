@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.im30.googledemo">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-sdk tools:overrideLibrary="com.bun.miitmdid"/>
 
     <application
         android:allowBackup="true"
@@ -15,9 +18,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data
-            android:name="com.google.android.actions"
-            android:resource="@xml/actions" />
+
         <!-- <activity android:name=".GoogleloginActivity"></activity> -->
         <activity
             android:name=".GoogleloginActivity"

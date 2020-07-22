@@ -1,0 +1,24 @@
+android/support/multidex/MultiDex$V14.class
+android/support/multidex/MultiDex$V19.class
+android/support/multidex/MultiDex$V4.class
+android/support/multidex/MultiDex.class
+android/support/multidex/MultiDexApplication.class
+android/support/multidex/MultiDexExtractor$1.class
+android/support/multidex/MultiDexExtractor.class
+android/support/multidex/ZipUtil$CentralDirectory.class
+android/support/multidex/ZipUtil.class
+
+-keep class com.bun.** {*;}
+-keep class com.asus.msa.** {*;}
+-keep class com.heytap.openid.** {*;}
+-keep class com.huawei.android.hms.pps.** {*;}
+-keep class com.meizu.flyme.openidsdk.** {*;}
+-keep class com.samsung.android.deviceidservice.** {*;}
+-keep class com.zui.** {*;}
+-keep class com.huawei.hms.ads.** {*; }
+-keep interface com.huawei.hms.ads.** {*; }
+
+-keepattributes *Annotation*
+-keep @android.support.annotation.Keep class **{
+@android.support.annotation.Keep <fields>;
+@android.support.annotation.Keep <methods>;
