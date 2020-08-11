@@ -11,7 +11,7 @@ import com.bun.miitmdid.interfaces.IdSupplier;
 import androidx.annotation.NonNull;
 
 /**
- * Created by caict on 2020/6/8.
+ * Created by dongjunjie on 2020/7/20.
  */
 
 public class MiitHelper implements IIdentifierListener {
