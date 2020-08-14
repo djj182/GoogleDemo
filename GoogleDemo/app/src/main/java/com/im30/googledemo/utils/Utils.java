@@ -1,6 +1,8 @@
 package com.im30.googledemo.utils;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.ResolveInfo;
 import android.util.Log;
 
@@ -151,4 +153,13 @@ public class Utils {
         return false;
     }
 
+    public static boolean isApkDebugAble(Context context) {
+        try {
+            ApplicationInfo applicationInfo = context.getApplicationInfo();
+            return (applicationInfo.flags&ApplicationInfo.FLAG_DEBUGGABLE) != 0;
+        } catch (Exception e) {
+
+        }
+        return false;
+    }
 }

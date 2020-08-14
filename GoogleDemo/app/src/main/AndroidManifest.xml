@@ -50,6 +50,11 @@
             android:name="com.google.android.gms.games.APP_ID"
             android:value="@string/app_id" />
 
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1832760595508219~3691049640"/>
+
         <service android:name=".pushdemo.FirebaseCutomMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

@@ -2,10 +2,12 @@ package com.im30.googledemo;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +23,8 @@ import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.games.Games;
 import com.google.android.material.snackbar.Snackbar;
+import com.im30.googledemo.ads.AdsManager;
+import com.im30.googledemo.ads.AdsType;
 
 public class GoogleloginActivity extends BaseActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener{
 
@@ -58,6 +62,7 @@ public class GoogleloginActivity extends BaseActivity implements GoogleApiClient
     private GoogleApiClient mGoogleApiClient;
     private GoogleSignInClient mGoogleSignInClient;
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,10 +81,17 @@ public class GoogleloginActivity extends BaseActivity implements GoogleApiClient
         Button button = (Button) findViewById(R.id.button);
         signIn();
         Snackbar.make(button,R.string.app_id,Snackbar.LENGTH_LONG).setAnchorView(button).show();
+
+        AdsManager.getInstance().init(this);
+        AdsManager.static_load(AdsType.ADS_FULLSREEN_REWARD.getValue());
     }
 
     public void googleLoginClick(View view) {
         signIn();
+    }
+
+    public void openAds(View view) {
+        AdsManager.getInstance().openAds(AdsType.ADS_FULLSREEN_REWARD);
     }
 
     public void init(Activity theActivity, LoginCallback callback) {
