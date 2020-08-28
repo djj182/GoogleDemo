@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.im30.googledemo">
 
+    <uses-sdk tools:overrideLibrary="com.bun.miitmdid" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
-
-    <uses-sdk tools:overrideLibrary="com.bun.miitmdid"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -18,8 +18,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <!-- <activity android:name=".GoogleloginActivity"></activity> -->
+        <activity android:name=".ui.activitys.FilepathTestActivity"></activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:label="@string/title_activity_login" /> <!-- <activity android:name=".GoogleloginActivity"></activity> -->
         <activity
             android:name=".GoogleloginActivity"
             android:screenOrientation="portrait">
@@ -48,12 +53,10 @@
 
         <meta-data
             android:name="com.google.android.gms.games.APP_ID"
-            android:value="@string/app_id" />
-
-        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+            android:value="@string/app_id" /> <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-1832760595508219~3691049640"/>
+            android:value="ca-app-pub-1832760595508219~3691049640" />
 
         <service android:name=".pushdemo.FirebaseCutomMessagingService">
             <intent-filter>

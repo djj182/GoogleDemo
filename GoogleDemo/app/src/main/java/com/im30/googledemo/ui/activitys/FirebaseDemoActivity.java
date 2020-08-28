@@ -1,4 +1,4 @@
-package com.im30.googledemo;
+package com.im30.googledemo.ui.activitys;
 
 import android.os.AsyncTask;
 import android.os.Build;
@@ -11,6 +11,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
 import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.Trace;
+import com.im30.googledemo.BaseActivity;
 //import com.google.firebase.quickstart.perfmon.databinding.ActivityMainBinding;
 
 import java.io.File;
