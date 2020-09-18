@@ -29,6 +29,7 @@ import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.im30.googledemo.thirdSDK.MiitHelper;
 
 import java.io.File;
@@ -91,6 +92,8 @@ public class BaseActivity extends AppCompatActivity {
         try {
             mFirebaseApp = FirebaseApp.initializeApp(this);
             m_FirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+            FirebaseCrashlytics.getInstance().setUserId("12998649000199");
+            FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true);
 
             // 第一次打开app打点
             m_FirebaseAnalytics.logEvent(FirebaseAnalytics.Event.APP_OPEN,null);
