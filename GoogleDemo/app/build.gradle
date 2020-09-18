@@ -15,6 +15,16 @@ android {
         versionName "1.0"
 //        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11"
+            }
+        }
+
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
     }
     buildTypes {
         release {
@@ -32,14 +42,21 @@ android {
         debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            firebaseCrashlytics {
                 // Enable processing and uploading of native symbols to Crashlytics
                 // servers. By default, this is disabled to improve build speeds.
                 // This flag must be enabled to see properly-symbolicated native
                 // stack traces in the Crashlytics dashboard.
-//                nativeSymbolUploadEnabled true
+                nativeSymbolUploadEnabled true
+            }
         }
     }
 
+    externalNativeBuild {
+        cmake {
+            path file('src/main/cpp/CMakeLists.txt')
+        }
+    }
 
     sourceSets.main {
         assets.srcDir "assets"

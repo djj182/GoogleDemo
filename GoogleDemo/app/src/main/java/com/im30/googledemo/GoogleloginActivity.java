@@ -6,7 +6,9 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +27,7 @@ import com.google.android.gms.games.Games;
 import com.google.android.material.snackbar.Snackbar;
 import com.im30.googledemo.ads.AdsManager;
 import com.im30.googledemo.ads.AdsType;
+import com.im30.googledemo.ui.activitys.CppDemoActivity;
 
 public class GoogleloginActivity extends BaseActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener{
 
@@ -91,7 +94,11 @@ public class GoogleloginActivity extends BaseActivity implements GoogleApiClient
     }
 
     public void openAds(View view) {
-        AdsManager.getInstance().openAds(AdsType.ADS_FULLSREEN_REWARD);
+        Intent intent = new Intent(this,CppDemoActivity.class);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+//        AdsManager.getInstance().openAds(AdsType.ADS_FULLSREEN_REWARD);
     }
 
     public void init(Activity theActivity, LoginCallback callback) {

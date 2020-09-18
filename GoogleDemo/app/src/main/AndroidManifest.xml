@@ -41,6 +41,8 @@
             <!-- android:minWidth="300dp" /> -->
         </activity>
 
+        <activity android:name=".ui.activitys.CppDemoActivity"/>
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
