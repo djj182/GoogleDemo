@@ -17,8 +17,9 @@ Java_com_im30_googledemo_ui_activitys_CppDemoActivity_stringFromJNI(
         jobject /* this */) {
     std::string hello = "Hello from C++";
     FILE *fp = fopen("/storage", "rb");
-    FILE *fp2= nullptr;
-    std::fgetc(fp2);
+    // 测试BUG 注释掉
+//    FILE *fp2= nullptr;
+//    std::fgetc(fp2);
     return env->NewStringUTF(hello.c_str());
 }
 

@@ -1,6 +1,8 @@
-package com.im30.googledemo;
+package com.im30.googledemo.ui.activitys;
 
 import android.os.Bundle;
+
+import com.im30.googledemo.R;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;

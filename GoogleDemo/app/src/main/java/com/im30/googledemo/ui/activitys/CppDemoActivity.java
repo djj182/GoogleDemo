@@ -24,6 +24,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.im30.googledemo.R;
 
 import java.io.ByteArrayOutputStream;
@@ -668,6 +669,7 @@ public class CppDemoActivity extends AppCompatActivity {
                 // save to local
                 final String absolutePath = savePhotoToSDCard(bmp, Environment.getExternalStorageDirectory().getAbsolutePath(), String.valueOf(gameUid +"_" + index));
                 File dir = new File(absolutePath);
+                FirebaseCrashlytics.getInstance().log("TestDebug");
                 if(dir.exists()){
                     //FBUtil.nativeSendHeadImgUrl(absolutePath);
                     new Thread(new Runnable() {

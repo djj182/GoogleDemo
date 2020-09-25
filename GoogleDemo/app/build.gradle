@@ -35,7 +35,7 @@ android {
                 // servers. By default, this is disabled to improve build speeds.
                 // This flag must be enabled to see properly-symbolicated native
                 // stack traces in the Crashlytics dashboard.
-//                nativeSymbolUploadEnabled true
+                nativeSymbolUploadEnabled true
             }
         }
 
@@ -109,6 +109,8 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation 'androidx.preference:preference:1.1.1'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
 
     // 广告接入
 //    implementation files('AudienceNetwork.aar')

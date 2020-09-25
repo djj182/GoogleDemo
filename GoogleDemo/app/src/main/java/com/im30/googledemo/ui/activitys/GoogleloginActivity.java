@@ -1,4 +1,4 @@
-package com.im30.googledemo;
+package com.im30.googledemo.ui.activitys;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,6 +25,8 @@ import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.games.Games;
 import com.google.android.material.snackbar.Snackbar;
+import com.im30.googledemo.BaseActivity;
+import com.im30.googledemo.R;
 import com.im30.googledemo.ads.AdsManager;
 import com.im30.googledemo.ads.AdsType;
 import com.im30.googledemo.ui.activitys.CppDemoActivity;
@@ -80,6 +82,7 @@ public class GoogleloginActivity extends BaseActivity implements GoogleApiClient
                 int a = 0;
             }
         });
+
         setContentView(R.layout.activity_googlelogin);
         Button button = (Button) findViewById(R.id.button);
         signIn();
@@ -94,11 +97,11 @@ public class GoogleloginActivity extends BaseActivity implements GoogleApiClient
     }
 
     public void openAds(View view) {
-        Intent intent = new Intent(this,CppDemoActivity.class);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        }
-//        AdsManager.getInstance().openAds(AdsType.ADS_FULLSREEN_REWARD);
+//        Intent intent = new Intent(this,CppDemoActivity.class);
+////        if (intent.resolveActivity(getPackageManager()) != null) {
+////            startActivity(intent);
+////        }
+        AdsManager.getInstance().openAds(AdsType.ADS_FULLSREEN_REWARD);
     }
 
     public void init(Activity theActivity, LoginCallback callback) {
