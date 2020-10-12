@@ -7,6 +7,7 @@ apply plugin: 'com.google.firebase.crashlytics'
 android {
     compileSdkVersion 28
     buildToolsVersion "28.0.3"
+    println 'BUILD_MODE cmake'
     defaultConfig {
         applicationId "com.im30.googledemo"
         minSdkVersion 16
@@ -17,8 +18,19 @@ android {
         multiDexEnabled true
 
         externalNativeBuild {
-            cmake {
-                cppFlags "-std=c++11"
+            if (BUILD_MODE == "cmake") {
+                println 'BUILD_MODE cmake'
+                cmake {
+                    cppFlags "-std=c++11"
+                }
+            }
+
+            if (BUILD_MODE == "ndk-build") {
+                println 'BUILD_MODE ndk-build'
+                ndkBuild {
+                    arguments "NDK_APPLICATION_MK:=jni/Application.mk"
+                    cppFlags "-std=c++11"
+                }
             }
         }
 
@@ -36,6 +48,10 @@ android {
                 // This flag must be enabled to see properly-symbolicated native
                 // stack traces in the Crashlytics dashboard.
                 nativeSymbolUploadEnabled true
+                if (BUILD_MODE == "ndkbuild_script") {
+                    strippedNativeLibsDir 'libs'
+                    unstrippedNativeLibsDir 'obj'
+                }
             }
         }
 
@@ -48,18 +64,33 @@ android {
                 // This flag must be enabled to see properly-symbolicated native
                 // stack traces in the Crashlytics dashboard.
                 nativeSymbolUploadEnabled true
+                if (BUILD_MODE == "ndkbuild_script") {
+                    strippedNativeLibsDir 'libs'
+                    unstrippedNativeLibsDir 'obj'
+                }
             }
         }
     }
 
     externalNativeBuild {
-        cmake {
-            path file('src/main/cpp/CMakeLists.txt')
+        if (BUILD_MODE == "cmake") {
+            println 'BUILD_MODE cmake'
+            cmake {
+                path file('src/main/cpp/CMakeLists.txt')
+            }
+        }
+
+        if (BUILD_MODE == "ndk-build") {
+            println 'BUILD_MODE ndk-build'
+            ndkBuild {
+                path "jni/Android.mk"
+            }
         }
     }
 
     sourceSets.main {
         assets.srcDir "assets"
+        jniLibs.srcDir "libs"
     }
 
 

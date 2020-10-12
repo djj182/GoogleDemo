@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.im30.googledemo.ui.activitys.CppDemoActivity;
 import com.im30.googledemo.ui.home.HomePageActivity;
 import com.im30.googledemo.R;
 import com.im30.googledemo.utils.AndroidUtils;
@@ -29,7 +30,7 @@ public class SplashAdsActivity extends AppCompatActivity {
     }
 
     private void jumpMainActivity() {
-        startActivity(new Intent(this, HomePageActivity.class));
+        startActivity(new Intent(this, CppDemoActivity.class));
     }
 
 
