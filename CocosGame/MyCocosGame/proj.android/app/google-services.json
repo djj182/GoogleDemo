@@ -1,0 +1,78 @@
+{
+  "project_info": {
+    "project_number": "139762619690",
+    "firebase_url": "https://im30googldemo.firebaseio.com",
+    "project_id": "im30googldemo",
+    "storage_bucket": "im30googldemo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139762619690:android:5b791baf0cc2344552ba53",
+        "android_client_info": {
+          "package_name": "com.im30.googledemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139762619690-iss1qrft89vutgqq829blecmm5qcthi5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.im30.googledemo",
+            "certificate_hash": "8f1376df271cf6bb7b80047cd9f350a705de47d6"
+          }
+        },
+        {
+          "client_id": "139762619690-a7luda4n6755nvc72bvvcp1b89la4f89.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6Exid8lI0Gj6tordcW4Y_s_2Fgtznnz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139762619690-a7luda4n6755nvc72bvvcp1b89la4f89.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-1832760595508219~3691049640"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139762619690:android:c36d0544aa6c422f52ba53",
+        "android_client_info": {
+          "package_name": "com.im30.mycocosgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139762619690-a7luda4n6755nvc72bvvcp1b89la4f89.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6Exid8lI0Gj6tordcW4Y_s_2Fgtznnz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139762619690-a7luda4n6755nvc72bvvcp1b89la4f89.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

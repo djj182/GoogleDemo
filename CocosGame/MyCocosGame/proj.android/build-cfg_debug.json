@@ -1,0 +1,30 @@
+{
+    "ndk_module_path" :[
+        "../../cocos2d",
+        "../../cocos2d/cocos",
+        "../../cocos2d/external",
+        "../../cryptim30"
+    ],
+    "copy_resources": [
+        {
+            "from": "../../CCB/DayZResources",
+            "to": "./DayZResources"
+        },
+	   {
+            "from": "../../android_expack",
+            "to": ""
+        },
+        {
+            "from": "../../android_generate",
+            "to": "./DayZTexture"
+        },
+        {
+            "from": "../../proj.android-studio/Resources",
+            "to": ""
+        },
+        {
+            "from": "../../android_icons/debug",
+            "to": "../res"
+        }
+    ]
+}

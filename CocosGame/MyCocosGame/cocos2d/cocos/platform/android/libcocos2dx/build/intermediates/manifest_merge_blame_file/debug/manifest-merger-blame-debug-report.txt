@@ -1,0 +1,21 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.cocos2dx.lib"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="10"
+8-->/Users/dongjunjie/Demo/CocosGame/MyCocosGame/cocos2d/cocos/platform/android/libcocos2dx/AndroidManifest.xml
+9        android:targetSdkVersion="22" />
+9-->/Users/dongjunjie/Demo/CocosGame/MyCocosGame/cocos2d/cocos/platform/android/libcocos2dx/AndroidManifest.xml
+10
+11    <application
+11-->/Users/dongjunjie/Demo/CocosGame/MyCocosGame/cocos2d/cocos/platform/android/libcocos2dx/AndroidManifest.xml:3:5-5:19
+12        android:allowBackup="true"
+12-->/Users/dongjunjie/Demo/CocosGame/MyCocosGame/cocos2d/cocos/platform/android/libcocos2dx/AndroidManifest.xml:3:18-44
+13        android:label="libcocos2dx" >
+13-->/Users/dongjunjie/Demo/CocosGame/MyCocosGame/cocos2d/cocos/platform/android/libcocos2dx/AndroidManifest.xml:3:45-72
+14    </application>
+15
+16</manifest>
